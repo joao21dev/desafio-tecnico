@@ -14,6 +14,7 @@ import { GridExpandMoreIcon } from "@mui/x-data-grid";
 import HomeAccordion from "@/components/home/homeAccordion";
 import LojistasAccordionDetails from "@/components/home/lojistasAccordionDetails";
 import StoreDataAccordionDetails from "@/components/home/storeDataAccordionDetail";
+import withAuth from "@/hoc/withAuth";
 
 const home = () => {
   return (
@@ -93,4 +94,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default withAuth(home);

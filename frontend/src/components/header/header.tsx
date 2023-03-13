@@ -1,8 +1,15 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
+import useAuthStore from "@/stores/useAuthStore";
 
 const Header = () => {
+  const authStore = useAuthStore();
+
+  const handleLogout = () => {
+    authStore.logout();
+  };
+
   return (
     <Box
       bgcolor="#fff"
@@ -20,7 +27,6 @@ const Header = () => {
         style={{ marginLeft: 120 }}
       />
       <Box display="flex" alignItems="flex-end" mb="-8px">
-        {" "}
         <Button
           sx={{
             borderRadius: "8px 8px 0px 0px",
@@ -54,6 +60,7 @@ const Header = () => {
               backgroundColor: "#F8F8F8",
             },
           }}
+          onClick={handleLogout}
         >
           <Box display="flex" flexDirection="column" alignItems="center">
             <Image

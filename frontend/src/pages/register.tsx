@@ -1,11 +1,11 @@
-import React from "react";
-import { Grid } from "@mui/material";
 import LoginBackground from "@/components/login/loginBackground";
-import LoginHeader from "@/components/login/loginHeader";
-import LoginForm from "@/components/login/loginForm";
 import LoginFooter from "@/components/login/loginFooter";
+import LoginHeader from "@/components/login/loginHeader";
+import RegisterForm from "@/components/register/registerForm";
+import { Grid } from "@mui/material";
+import React from "react";
 
-const login = () => {
+const Register = () => {
   return (
     <Grid container>
       <Grid item xs={23} md={6}>
@@ -20,12 +20,12 @@ const login = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <LoginHeader type="login" />
-        <LoginForm />
+        <LoginHeader type={'register'} />
+        <RegisterForm />
         <LoginFooter />
       </Grid>
     </Grid>
   );
 };
 
-export default login;
+export default Register;

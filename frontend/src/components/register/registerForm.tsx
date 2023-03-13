@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
 import useAuthStore from "@/stores/useAuthStore";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const authStore = useAuthStore();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
     setLoading(true);
 
     try {
-      await authStore.login(email, password);
+      await authStore.register(name, email, password);
     } catch (error: any) {
       setError(error.response.data.error);
     }
@@ -24,7 +25,15 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleRegister}>
+      <TextField
+        label="Seu nome"
+        variant="outlined"
+        fullWidth
+        margin="normal"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <TextField
         label="Seu e-mail"
         variant="outlined"
@@ -54,10 +63,10 @@ const LoginForm = () => {
         fullWidth
         disabled={loading}
       >
-        Entrar
+        Registrar
       </Button>
     </form>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
