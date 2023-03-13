@@ -2353,8 +2353,32 @@
         "version": "a822e2e577e155f3d8921bef7114be1e1416b716f145d5b6c74a058542435827",
         "signature": "7e103a5d1887cd302e878e710eaa083e006d9f1d041e5c457de53776f8aba54d"
       },
+      "../src/stores/store.entity.ts": {
+        "version": "fb2032fe1315ab271d1f2c3fbfcee87ed24f9f78e9c811f33e30a87ff48ed98f",
+        "signature": "7e35ba215f95b7d2626a6544d3fd7349e7d5546974f69dfe7d0327f5ee432349"
+      },
+      "../src/stores/dto/createStore.dto.ts": {
+        "version": "4bddcba38b79fbc532e5e907e9ecd518b4fbb83be18aa1ebad623b3677f6f207",
+        "signature": "0dbc6428f46952e3d88ac13cd92d0074d2c526e3bed90726343da3b49370109d"
+      },
+      "../src/stores/dto/updateStore.dto.ts": {
+        "version": "ad2c015093be30577d7ed03077dc24e70f5f0d4b41eff8bc5fb78274969ee62a",
+        "signature": "d304b8c9cbf97a70486facc612645f367f416fe147aff23e7a6185d83dff8995"
+      },
+      "../src/stores/stores.service.ts": {
+        "version": "a1e6989c0ecf85250c3581a8dad52e6c845b091ae1cecc6e2b796c3d0c56db2c",
+        "signature": "5a6608481617a38fd734178643e7f2ec9e21970ec8aa35fcb7d8e8eb2908f18c"
+      },
+      "../src/stores/stores.controller.ts": {
+        "version": "c7706bc78b736735d6c9fccf2f05271543c6d04d2fb3ca2e51d386cf32ac65b3",
+        "signature": "4895ea4c51fa351304dde691649cce032b1bd2fc2853f2b8c47d31117f82772a"
+      },
+      "../src/stores/stores.module.ts": {
+        "version": "65098bffb55a997809cf0a43799fd722090041c0fad567df99796358cb28a7d7",
+        "signature": "1facf7d1c101cbde31328decad1975035d0ffac69c14f7cf1e22300dcc8836bf"
+      },
       "../src/app.module.ts": {
-        "version": "206c2e4af166e1c36b3a7e04e4155c901c6984d48922e908823957c1d2921ec2",
+        "version": "fd0939507ba1be86adb0e5b7b7d7539c444e4887d7ccaf3af453218860f2beb7",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -7609,6 +7633,59 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/stores/store.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/stores/dto/createStore.dto.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/stores/dto/updateStore.dto.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/stores/stores.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/stores/dto/createStore.dto.ts",
+        "../src/stores/dto/updateStore.dto.ts",
+        "../src/stores/store.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/stores/stores.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/authentication/jwt-authentication.guard.ts",
+        "../src/stores/dto/createStore.dto.ts",
+        "../src/stores/dto/updateStore.dto.ts",
+        "../src/stores/stores.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/stores/stores.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/stores/store.entity.ts",
+        "../src/stores/stores.controller.ts",
+        "../src/stores/stores.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/config/index.d.ts",
@@ -7616,6 +7693,7 @@
         "../src/database/database.module.ts",
         "../src/authentication/authentication.module.ts",
         "../src/users/users.module.ts",
+        "../src/stores/stores.module.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -8734,6 +8812,18 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/stores/stores.controller.ts": [
+        "../src/stores/dto/createStore.dto.ts",
+        "../src/stores/dto/updateStore.dto.ts",
+        "../src/stores/stores.service.ts",
+        "../src/stores/store.entity.ts"
+      ],
+      "../src/stores/stores.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/stores/dto/createStore.dto.ts",
+        "../src/stores/dto/updateStore.dto.ts",
+        "../src/stores/store.entity.ts"
       ],
       "../src/authentication/jwt.strategy.ts": [
         "../node_modules/@types/passport-jwt/index.d.ts",
