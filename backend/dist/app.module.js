@@ -12,6 +12,7 @@ const Joi = require("@hapi/joi");
 const database_module_1 = require("./database/database.module");
 const authentication_module_1 = require("./authentication/authentication.module");
 const users_module_1 = require("./users/users.module");
+const stores_module_1 = require("./stores/stores.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -32,6 +33,7 @@ AppModule = __decorate([
             database_module_1.DatabaseModule,
             authentication_module_1.AuthenticationModule,
             users_module_1.UsersModule,
+            stores_module_1.StoresModule,
         ],
         controllers: [],
         providers: [],
