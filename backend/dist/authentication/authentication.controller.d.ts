@@ -7,5 +7,6 @@ export declare class AuthenticationController {
     constructor(authenticationService: AuthenticationService);
     register(registrationData: RegisterDto): Promise<import("../users/user.entity").default>;
     logIn(request: RequestWithUser, response: Response): Promise<Response<any>>;
+    logOut(response: Response): Promise<Response<any>>;
     authenticate(request: RequestWithUser): import("../users/user.entity").default;
 }

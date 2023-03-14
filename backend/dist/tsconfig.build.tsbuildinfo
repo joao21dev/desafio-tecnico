@@ -2230,7 +2230,7 @@
         "signature": "7343d9847b88835da97fda547cdb37e4fe1f163a1336f44ee2dff97bad920b66"
       },
       "../src/authentication/authentication.service.ts": {
-        "version": "9fd26e11750345eee6e07d377ec75e0952d304351646471d01d997e52a30880c",
+        "version": "9a3075100ef2362d82ca7be1230875ebb05af8d0c213ea76bee5b4b8f81a1f25",
         "signature": "61d011bf75b24a876afdf5c916ddb54cf9c2b2535e3cb33531ae7b68ed3663ee"
       },
       "../src/users/users.module.ts": {
@@ -2326,8 +2326,8 @@
         "signature": "cc458027def2827ab9707b37b3b54c4bbd95516ec01295c0b03b30fb15cd036d"
       },
       "../src/authentication/authentication.controller.ts": {
-        "version": "b7dcb3b315e6d5f46e47d33d05677a4196579f1f63dc5feeb4666d6b345c8d1f",
-        "signature": "4180689bc817c05a7c878ba347a240ab851b4a26234d0d367093c4ee58f00c0f"
+        "version": "45dfc6550c0abd826fd53379ebada143a67223a6f2c61d121a0c2b6256b6f521",
+        "signature": "bac2ea38ce8121f125fd128e04e2849dc94dab0c8c110d2f8eb32a990868a8ae"
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
         "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
@@ -2530,7 +2530,7 @@
         "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8"
       },
       "../src/main.ts": {
-        "version": "63dace2954957b1ef9f61d0b6636f53f93ad18dff4c80d3a73fa75434e8c49dc",
+        "version": "d624ead724f81dd68f18e61545a2c8de84597ffedc510c4a83156784a836eece",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../src/users/users.controllers.ts": {

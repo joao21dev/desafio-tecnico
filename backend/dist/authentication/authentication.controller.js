@@ -31,6 +31,10 @@ let AuthenticationController = class AuthenticationController {
         user.password = undefined;
         return response.send(user);
     }
+    async logOut(response) {
+        response.setHeader('Set-Cookie', this.authenticationService.getCookieForLogOut());
+        return response.sendStatus(200);
+    }
     authenticate(request) {
         const user = request.user;
         user.password = undefined;
@@ -53,6 +57,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], AuthenticationController.prototype, "logIn", null);
+__decorate([
+    common_1.Post('log-out'),
+    __param(0, common_1.Res()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], AuthenticationController.prototype, "logOut", null);
 __decorate([
     common_1.UseGuards(jwt_authentication_guard_1.default),
     common_1.Get(),

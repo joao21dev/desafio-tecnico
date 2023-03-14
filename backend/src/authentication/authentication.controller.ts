@@ -35,6 +35,15 @@ export class AuthenticationController {
     return response.send(user);
   }
 
+  @Post('log-out')
+  async logOut(@Res() response: Response) {
+    response.setHeader(
+      'Set-Cookie',
+      this.authenticationService.getCookieForLogOut(),
+    );
+    return response.sendStatus(200);
+  }
+
   @UseGuards(JwtAuthenticationGuard)
   @Get()
   authenticate(@Req() request: RequestWithUser) {
