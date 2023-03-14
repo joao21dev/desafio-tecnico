@@ -15,8 +15,13 @@ import HomeAccordion from "@/components/home/homeAccordion";
 import LojistasAccordionDetails from "@/components/home/lojistasAccordionDetails";
 import StoreDataAccordionDetails from "@/components/home/storeDataAccordionDetail";
 import withAuth from "@/hoc/withAuth";
+import { useStore } from "@/stores/useStore";
 
-const home = () => {
+const Home = () => {
+  const { store } = useStore();
+
+  console.log(store);
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Header />
@@ -42,56 +47,57 @@ const home = () => {
               height: "40px",
             }}
           />
-          <HomeHeader />
-          <Typography
-            textAlign="center"
-            mt="82px"
-            sx={{ fontWeight: "bold", fontSize: "24px", color: "#271718" }}
-          >
-            INFORMAÇÕES ADICIONAIS
-          </Typography>
-          <Box
-            sx={{
-              bgcolor: "#FFFFFF",
-              height: "184px",
-              border: "1px solid #E2E2E2",
-              borderRadius: "16px",
-              padding: "40px",
-              boxSizing: "border-box",
-              mt: "40px",
-            }}
-          >
-            <Typography
-              textAlign="left"
-              lineHeight={2}
-              sx={{ fontSize: "14px", color: "#271718" }}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-          </Box>
-          <Typography
-            textAlign="center"
-            mt="78px"
-            sx={{ fontWeight: "bold", fontSize: "24px", color: "#271718" }}
-          >
-            DADOS CADASTRAIS
-          </Typography>
+          {store && (
+            <>
+              <HomeHeader />
+              <Typography
+                textAlign="center"
+                mt="82px"
+                sx={{ fontWeight: "bold", fontSize: "24px", color: "#271718" }}
+              >
+                INFORMAÇÕES ADICIONAIS
+              </Typography>
+              <Box
+                sx={{
+                  bgcolor: "#FFFFFF",
+                  height: "184px",
+                  border: "1px solid #E2E2E2",
+                  borderRadius: "16px",
+                  padding: "40px",
+                  boxSizing: "border-box",
+                  mt: "40px",
+                }}
+              >
+                <Typography
+                  textAlign="left"
+                  lineHeight={2}
+                  sx={{ fontSize: "14px", color: "#271718" }}
+                >
+                  {store?.description}
+                </Typography>
+              </Box>
+              <Typography
+                textAlign="center"
+                mt="78px"
+                sx={{ fontWeight: "bold", fontSize: "24px", color: "#271718" }}
+              >
+                DADOS CADASTRAIS
+              </Typography>
 
-          <HomeAccordion label="LOJISTAS" data={<LojistasAccordionDetails />} />
-          <HomeAccordion
-            label="DADOS DA LOJA"
-            data={<StoreDataAccordionDetails />}
-          />
+              <HomeAccordion
+                label="LOJISTAS"
+                data={<LojistasAccordionDetails />}
+              />
+              <HomeAccordion
+                label="DADOS DA LOJA"
+                data={<StoreDataAccordionDetails />}
+              />
+            </>
+          )}
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default withAuth(home);
+export default Home;

@@ -21,7 +21,9 @@ const useAuthStore = create<AuthStore>((set) => ({
         email,
         password,
       });
+      // Redirect to home page
       window.location.href = "/home";
+      // Set isLoggedIn to true
       sessionStorage.setItem("isLoggedIn", "true");
     } catch (error: any) {
       console.error(error);

@@ -1,35 +1,44 @@
+import { useStore } from "@/stores/useStore";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
 const StoreDataAccordionDetails = () => {
+const { store } = useStore();
+  
   return (
     <React.Fragment>
       <Box mr={16}>
         <Box sx={{ display: "flex", gap: "16px" }}>
           <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-            Nome:
+            CNPJ: {store?.cnpj}
           </Typography>
           <Typography variant="subtitle1">Exemplo de nome</Typography>
         </Box>
         <Box sx={{ display: "flex", gap: "16px" }}>
           <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-            Email:
+            Nome Fantasia:
           </Typography>
-          <Typography variant="subtitle1">exemplo@email.com</Typography>
+          <Typography variant="subtitle1">{store?.fantasyName}</Typography>
+        </Box>
+        <Box sx={{ display: "flex", gap: "16px" }}>
+          <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+            Razaão Social:
+          </Typography>
+          <Typography variant="subtitle1">{store?.socialName}</Typography>
         </Box>
       </Box>
       <Box>
         <Box sx={{ display: "flex", gap: "16px" }}>
           <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-            Telefone:
+            E-mail:
           </Typography>
-          <Typography variant="subtitle1">(00) 0000-0000</Typography>
+          <Typography variant="subtitle1">{store?.storeEmail}</Typography>
         </Box>
         <Box sx={{ display: "flex", gap: "16px" }}>
           <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
-            Telefone 2:
+            Telefone:
           </Typography>
-          <Typography variant="subtitle1">(00) 0000-0000</Typography>
+          <Typography variant="subtitle1">{store?.storePhone}</Typography>
         </Box>
       </Box>
     </React.Fragment>
