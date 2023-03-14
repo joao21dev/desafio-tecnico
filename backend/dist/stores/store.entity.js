@@ -31,6 +31,10 @@ __decorate([
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
+], Store.prototype, "description", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
 ], Store.prototype, "storeEmail", void 0);
 __decorate([
     typeorm_1.Column(),

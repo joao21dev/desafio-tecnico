@@ -3,6 +3,7 @@ export declare class Store {
     cnpj: string;
     fantasyName: string;
     socialName: string;
+    description: string;
     storeEmail: string;
     storePhone: string;
     ownerName: string;

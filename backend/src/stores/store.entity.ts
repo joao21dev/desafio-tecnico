@@ -15,6 +15,9 @@ export class Store {
   public socialName: string;
 
   @Column()
+  public description: string;
+
+  @Column()
   public storeEmail: string;
 
   @Column()

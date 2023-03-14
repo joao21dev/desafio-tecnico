@@ -1,6 +1,7 @@
 export class UpdateStoreDto {
   id: number;
   cnpj?: string;
+  description?: string;
   fantasyName?: string;
   socialName?: string;
   storeEmail?: string;

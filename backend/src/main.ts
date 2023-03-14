@@ -7,8 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cors());
   app.use(cookieParser());
-  await app.listen(3000);
-  console.log('Server running on http://localhost:3000');
+  await app.listen(3007);
+  console.log('Server running on http://localhost:3007');
 }
 
 bootstrap();

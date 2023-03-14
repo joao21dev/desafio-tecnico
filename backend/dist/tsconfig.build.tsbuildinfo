@@ -2354,16 +2354,16 @@
         "signature": "7e103a5d1887cd302e878e710eaa083e006d9f1d041e5c457de53776f8aba54d"
       },
       "../src/stores/store.entity.ts": {
-        "version": "fb2032fe1315ab271d1f2c3fbfcee87ed24f9f78e9c811f33e30a87ff48ed98f",
-        "signature": "7e35ba215f95b7d2626a6544d3fd7349e7d5546974f69dfe7d0327f5ee432349"
+        "version": "84f330eb6bf0e2b4383dc22b5d5057b2271f4c86f7468d8541866872842ba752",
+        "signature": "07b81ec3832940cd600e8e5109e478d5835097c7f74afef8aaeb4c58743bf7fa"
       },
       "../src/stores/dto/createStore.dto.ts": {
-        "version": "4bddcba38b79fbc532e5e907e9ecd518b4fbb83be18aa1ebad623b3677f6f207",
-        "signature": "0dbc6428f46952e3d88ac13cd92d0074d2c526e3bed90726343da3b49370109d"
+        "version": "153affcb7e64614207595ad86039b066f1af8f11bfb74eb5f0f51cb4c498d568",
+        "signature": "32f1cf5305d829d9bd7459800085d420d054049582f1c4e2697b9cde57d01049"
       },
       "../src/stores/dto/updateStore.dto.ts": {
-        "version": "ad2c015093be30577d7ed03077dc24e70f5f0d4b41eff8bc5fb78274969ee62a",
-        "signature": "d304b8c9cbf97a70486facc612645f367f416fe147aff23e7a6185d83dff8995"
+        "version": "29d453e264c3694888571f0882133e256c1d2ef9f32a4a38aa4f39a9df6f4c69",
+        "signature": "e431bd4d10c7c1937676db96d7cc0d9a8ee89559995bf8fac1d84cbb990258fe"
       },
       "../src/stores/stores.service.ts": {
         "version": "e4b58653a48eb7ab4658f4e86ef8ebaedc2cfc58edfe1a36b79447d790c9886e",
@@ -2530,7 +2530,7 @@
         "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8"
       },
       "../src/main.ts": {
-        "version": "d624ead724f81dd68f18e61545a2c8de84597ffedc510c4a83156784a836eece",
+        "version": "ebe5fa97555e3f2034549392045b972a0d47aed5c30e5cbe41d0bc0385b19127",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../src/users/users.controllers.ts": {

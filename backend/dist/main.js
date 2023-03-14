@@ -8,8 +8,8 @@ async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.use(cors());
     app.use(cookieParser());
-    await app.listen(3000);
-    console.log('Server running on http://localhost:3000');
+    await app.listen(3007);
+    console.log('Server running on http://localhost:3007');
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

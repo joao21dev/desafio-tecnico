@@ -1,5 +1,6 @@
 export declare class CreateStoreDto {
     cnpj: string;
+    description: string;
     fantasyName: string;
     socialName: string;
     storeEmail: string;
