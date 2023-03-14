@@ -23,8 +23,8 @@ let StoresService = class StoresService {
     getAllStores() {
         return this.storesRepository.find();
     }
-    async getStoreById(id) {
-        const store = await this.storesRepository.findOne(id);
+    async getStoreByCNPJ(cnpj) {
+        const store = await this.storesRepository.findOne({ where: { cnpj } });
         if (store) {
             return store;
         }

@@ -6,7 +6,7 @@ export default class StoresService {
     private storesRepository;
     constructor(storesRepository: Repository<Store>);
     getAllStores(): Promise<Store[]>;
-    getStoreById(id: number): Promise<Store>;
+    getStoreByCNPJ(cnpj: string): Promise<Store>;
     createStore(store: CreateStoreDto): Promise<Store>;
     updateStore(id: number, store: UpdateStoreDto): Promise<Store>;
     deleteStore(id: number): Promise<void>;

@@ -16,8 +16,8 @@ export default class StoresService {
     return this.storesRepository.find();
   }
 
-  async getStoreById(id: number) {
-    const store = await this.storesRepository.findOne(id);
+  async getStoreByCNPJ(cnpj: string) {
+    const store = await this.storesRepository.findOne({ where: { cnpj } });
     if (store) {
       return store;
     }
