@@ -1,8 +1,10 @@
+import { useStore } from "@/stores/useStore";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 const HomeHeader = () => {
+  const { store } = useStore();
   return (
     <Box
       mt="32px"
@@ -41,14 +43,14 @@ const HomeHeader = () => {
           mr={1}
           sx={{ fontWeight: "bold", fontSize: "24px", color: "#271718" }}
         >
-          LOJA DE SUPLEMENTOS
+          {store?.fantasyName}
         </Typography>
         <Typography
           fontWeight="bold"
           sx={{ fontSize: "24px", color: "#BFBFBF" }}
         >
           {" "}
-          - LOJA DE SUPLEMENTOS LTDA.
+          - {store?.socialName}
         </Typography>
       </Box>
     </Box>

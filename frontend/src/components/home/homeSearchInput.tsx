@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { useStore } from "@/stores/useStore";
 
 const HomeSearchInput = () => {
+  const { cnpjValue, setCnpjValue, getStoreByCnpj, errorMessage } = useStore();
+
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCnpjValue(event.target.value);
+  };
+
+  const handleSearchStore = async () => {
+      await getStoreByCnpj(cnpjValue);
+  };
+
   return (
     <Box display="flex">
       <TextField
@@ -21,6 +32,8 @@ const HomeSearchInput = () => {
             </InputAdornment>
           ),
         }}
+        value={cnpjValue}
+        onChange={handleSearch}
       />
 
       <Button
@@ -34,6 +47,7 @@ const HomeSearchInput = () => {
           width: "calc(100% - 576px)",
           textTransform: "none",
         }}
+        onClick={handleSearchStore}
       >
         Buscar Loja
       </Button>
