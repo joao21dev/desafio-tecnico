@@ -24,8 +24,8 @@ let StoresController = class StoresController {
     getAllStores() {
         return this.storesService.getAllStores();
     }
-    getStoreById(id) {
-        return this.storesService.getStoreById(Number(id));
+    async getStoreByCNPJ(cnpj) {
+        return this.storesService.getStoreByCNPJ(cnpj);
     }
     async createStore(store) {
         return this.storesService.createStore(store);
@@ -44,12 +44,12 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], StoresController.prototype, "getAllStores", null);
 __decorate([
-    common_1.Get(':id'),
-    __param(0, common_1.Param('id')),
+    common_1.Get(':cnpj'),
+    __param(0, common_1.Param('cnpj')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
-], StoresController.prototype, "getStoreById", null);
+    __metadata("design:returntype", Promise)
+], StoresController.prototype, "getStoreByCNPJ", null);
 __decorate([
     common_1.Post(),
     common_1.UseGuards(jwt_authentication_guard_1.default),

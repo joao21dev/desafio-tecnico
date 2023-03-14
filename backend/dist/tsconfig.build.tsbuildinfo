@@ -2230,7 +2230,7 @@
         "signature": "7343d9847b88835da97fda547cdb37e4fe1f163a1336f44ee2dff97bad920b66"
       },
       "../src/authentication/authentication.service.ts": {
-        "version": "9a3075100ef2362d82ca7be1230875ebb05af8d0c213ea76bee5b4b8f81a1f25",
+        "version": "9fd26e11750345eee6e07d377ec75e0952d304351646471d01d997e52a30880c",
         "signature": "61d011bf75b24a876afdf5c916ddb54cf9c2b2535e3cb33531ae7b68ed3663ee"
       },
       "../src/users/users.module.ts": {
@@ -2366,12 +2366,12 @@
         "signature": "d304b8c9cbf97a70486facc612645f367f416fe147aff23e7a6185d83dff8995"
       },
       "../src/stores/stores.service.ts": {
-        "version": "a1e6989c0ecf85250c3581a8dad52e6c845b091ae1cecc6e2b796c3d0c56db2c",
-        "signature": "5a6608481617a38fd734178643e7f2ec9e21970ec8aa35fcb7d8e8eb2908f18c"
+        "version": "e4b58653a48eb7ab4658f4e86ef8ebaedc2cfc58edfe1a36b79447d790c9886e",
+        "signature": "152cea39d033c0cb93e978a53b89e6a892e5ef0b1421cb0d9d01a0accb88a980"
       },
       "../src/stores/stores.controller.ts": {
-        "version": "c7706bc78b736735d6c9fccf2f05271543c6d04d2fb3ca2e51d386cf32ac65b3",
-        "signature": "4895ea4c51fa351304dde691649cce032b1bd2fc2853f2b8c47d31117f82772a"
+        "version": "dce5d8fe142e0f8ee610d412b4847482ce47859db011a985c8d428b89ecea531",
+        "signature": "32d1ffd77e8185ff283835110ca3f1cf30c3a1f5345ce91b474d56ce6647863f"
       },
       "../src/stores/stores.module.ts": {
         "version": "65098bffb55a997809cf0a43799fd722090041c0fad567df99796358cb28a7d7",

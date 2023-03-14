@@ -22,9 +22,9 @@ export default class StoresController {
     return this.storesService.getAllStores();
   }
 
-  @Get(':id')
-  getStoreById(@Param('id') id: string) {
-    return this.storesService.getStoreById(Number(id));
+  @Get(':cnpj')
+  async getStoreByCNPJ(@Param('cnpj') cnpj: string) {
+    return this.storesService.getStoreByCNPJ(cnpj);
   }
 
   @Post()

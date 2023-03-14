@@ -5,7 +5,7 @@ export default class StoresController {
     private readonly storesService;
     constructor(storesService: StoresService);
     getAllStores(): Promise<import("./store.entity").Store[]>;
-    getStoreById(id: string): Promise<import("./store.entity").Store>;
+    getStoreByCNPJ(cnpj: string): Promise<import("./store.entity").Store>;
     createStore(store: CreateStoreDto): Promise<import("./store.entity").Store>;
     updateStore(id: string, store: UpdateStoreDto): Promise<import("./store.entity").Store>;
     deleteStore(id: string): Promise<void>;
