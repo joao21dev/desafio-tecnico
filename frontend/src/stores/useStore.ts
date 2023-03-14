@@ -62,7 +62,7 @@ export const useStore = create<StoreState>((set: SetState<StoreState>) => ({
       );
       set({ store: response.data, errorMessage: null });
     } catch (error: any) {
-      set({ store: null, errorMessage: null });
+      set({ store: null });
       if (error.response && error.response.status === 404) {
         set(() => ({ errorMessage: error.response.data.message }));
       } else {
