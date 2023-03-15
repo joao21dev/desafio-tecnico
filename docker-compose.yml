@@ -1,72 +1,51 @@
 version: "3.5"
-
 services:
-  admin:
-    image: phpmyadmin/phpmyadmin:latest
-    links:
-      - database:${MYSQL_HOST}
-    depends_on:
-      - database
+  postgres:
+    container_name: postgres
+    image: postgres:latest
     ports:
-      - "8080:80"
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      PMA_HOST: ${MYSQL_HOST}
-      PMA_PORT: ${MYSQL_PORT}
-    env_file: .env
-    
-  database:
-    image: mysql:5.7
-    container_name: ${MYSQL_HOST}
-    restart: always
+    - "5432:5432"
     volumes:
-      - database:/var/lib/mysql:rw
-      - ./db:/docker-entrypoint-initdb.d
+    - /data/postgres:/data/postgres
+    env_file:
+    - ./backend/.env
+    networks:
+    - backend_network
+ 
+  pgadmin:
+    links:
+    - postgres:postgres
+    container_name: pgadmin
+    image: dpage/pgadmin4
     ports:
-      - "${MYSQL_PORT}:${MYSQL_PORT}"
-    environment:
-      MYSQL_TCP_PORT: ${MYSQL_PORT}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DB_NAME}
-    env_file: .env
+    - "8080:80"
+    volumes:
+    - /data/pgadmin:/root/.pgadmin
+    env_file:
+    - ./backend/.env
+    networks:
+    - backend_network
 
   backend:
-    build: ./backend/
-    working_dir: /usr/src/app
-    restart: always
+    build: ./backend
     container_name: backend
-    links:
-      - database:${MYSQL_HOST}
-    depends_on:
-      - database
     ports:
-      - "${BACKEND_PORT}:3000"
-    volumes:
-      - ./backend:/usr/src/app
-      - backend-node-modules:/usr/src/app/node_modules
-    expose:
-      - "${BACKEND_PORT}"
-    command: "npm run start:dev"
-    env_file: .env
+      - "3007:3007"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - postgres
+    networks:
+      - backend_network
 
   frontend:
-    build: ./frontend/
-    working_dir: /usr/src/app
-    restart: always
+    build: ./frontend
     container_name: frontend
-    depends_on:
-      - backend
     ports:
-      - "${FRONTEND_PORT}:3000"
-    volumes:
-      - ./frontend:/usr/src/app
-      - frontend-node-modules:/usr/src/app/node_modules
-    expose:
-      - "${FRONTEND_PORT}"
-    command: "npm run start"
-    env_file: .env
+      - "4000:4000"
+    networks:
+      - backend_network
 
-volumes:
-  backend-node-modules:
-  frontend-node-modules:
-  database:
+networks:
+  backend_network:
+    driver: bridge

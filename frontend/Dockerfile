@@ -1,15 +1,14 @@
 FROM node:18-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-RUN chown -R node /usr/src/app
+COPY package.json .
+COPY yarn.lock .
 
-USER node
+RUN yarn install
 
-ADD package*.json ./
+COPY . .
 
-RUN npm ci
+EXPOSE 4000
 
-COPY --chown=node . .
-
-CMD [ "npm", "start" ]
+CMD ["sh", "-c", "echo 'Frontend rodando em http://localhost:4000'; yarn dev --port 4000"]
