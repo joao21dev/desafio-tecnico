@@ -36,7 +36,7 @@ Você também vai precisar de um editor de código, recomendo o [VS Code](https:
 
 ```shell
 # Clone este repositório (ou download )
-$ git clone git@github.com:joao21dev/erural-teste.git
+$ git clone git@github.com:joao21dev/desafio-t.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd desafio-tecnico/
