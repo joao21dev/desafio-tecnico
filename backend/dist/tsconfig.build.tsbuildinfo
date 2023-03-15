@@ -2685,11 +2685,11 @@
         "version": "2893564a05d3bbe2a4d812dfd5ad3d7a6981a754283b695272d6ead03f638b67",
         "signature": "2893564a05d3bbe2a4d812dfd5ad3d7a6981a754283b695272d6ead03f638b67"
       },
-      "../../../../node_modules/@types/minimist/index.d.ts": {
+      "../../../node_modules/@types/minimist/index.d.ts": {
         "version": "209e814e8e71aec74f69686a9506dd7610b97ab59dcee9446266446f72a76d05",
         "signature": "209e814e8e71aec74f69686a9506dd7610b97ab59dcee9446266446f72a76d05"
       },
-      "../../../../node_modules/@types/normalize-package-data/index.d.ts": {
+      "../../../node_modules/@types/normalize-package-data/index.d.ts": {
         "version": "6fa0008bf91a4cc9c8963bace4bba0bd6865cbfa29c3e3ccc461155660fb113a",
         "signature": "6fa0008bf91a4cc9c8963bace4bba0bd6865cbfa29c3e3ccc461155660fb113a"
       }
@@ -8304,13 +8304,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../../node_modules/@types/minimist/index.d.ts": [
+      "../../../node_modules/@types/minimist/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../../node_modules/@types/normalize-package-data/index.d.ts": [
+      "../../../node_modules/@types/normalize-package-data/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -13333,13 +13333,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../../node_modules/@types/normalize-package-data/index.d.ts": [
+      "../../../node_modules/@types/normalize-package-data/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../../node_modules/@types/minimist/index.d.ts": [
+      "../../../node_modules/@types/minimist/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
