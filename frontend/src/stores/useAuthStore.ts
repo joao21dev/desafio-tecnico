@@ -17,7 +17,7 @@ const useAuthStore = create<AuthStore>((set) => ({
   success: false,
   login: async (email, password) => {
     try {
-      await axios.post("http://localhost:3000/authentication/log-in", {
+      await axios.post("http://localhost:3007/authentication/log-in", {
         email,
         password,
       });
@@ -31,13 +31,13 @@ const useAuthStore = create<AuthStore>((set) => ({
   },
 
   logout: async () => {
-    await axios.post("http://localhost:3000/authentication/log-out");
+    await axios.post("http://localhost:3007/authentication/log-out");
     window.location.href = "/login";
     sessionStorage.clear();
   },
   register: async (name, email, password) => {
     try {
-      await axios.post("http://localhost:3000/authentication/register", {
+      await axios.post("http://localhost:3007/authentication/register", {
         name,
         email,
         password,
