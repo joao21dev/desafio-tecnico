@@ -1,4 +1,5 @@
 import { useStore } from "@/stores/useStore";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { Box, Button, InputAdornment, TextField } from "@mui/material";
 import { GridSearchIcon } from "@mui/x-data-grid";
 import React, { useState } from "react";
@@ -19,7 +20,7 @@ const HomeSearchInput = () => {
     }
   };
 
-  console.log(errorMessage)
+  console.log(errorMessage);
 
   const handleCloseModal = () => {
     setShowErrorModal(false);
@@ -33,7 +34,7 @@ const HomeSearchInput = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            width: 576,
+            width: { md: 576 },
             borderRadius: 4,
             backgroundColor: "#fff",
           }}
@@ -58,10 +59,32 @@ const HomeSearchInput = () => {
             marginLeft: 2,
             width: "calc(100% - 576px)",
             textTransform: "none",
+            display: { xs: "none", md: "block" },
+            "&:hover": {
+              backgroundColor: "#FB637E",
+            },
           }}
           onClick={handleSearchStore}
         >
           Buscar Loja
+        </Button>
+
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#BFBFBF",
+            color: "#fff",
+            fontSize: 14,
+            fontWeight: "bold",
+            marginLeft: 2,
+            width: "48px",
+            height: "48px",
+            borderRadius: "4px",
+            display: { xs: "block", md: "none" },
+          }}
+          onClick={handleSearchStore}
+        >
+          <AiOutlineArrowRight />
         </Button>
       </Box>
 

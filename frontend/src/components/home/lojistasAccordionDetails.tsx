@@ -20,8 +20,7 @@ const LojistasAccordionDetails = () => {
           </Typography>
           <Typography variant="subtitle1">{store?.ownerEmail}</Typography>
         </Box>
-      </Box>
-      <Box>
+
         <Box sx={{ display: "flex", gap: "16px" }}>
           <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
             Telefone:
@@ -32,7 +31,9 @@ const LojistasAccordionDetails = () => {
           <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
             Telefone 2:
           </Typography>
-          <Typography variant="subtitle1">{store?.ownerSecondaryPhone}</Typography>
+          <Typography variant="subtitle1">
+            {store?.ownerSecondaryPhone}
+          </Typography>
         </Box>
       </Box>
     </React.Fragment>
