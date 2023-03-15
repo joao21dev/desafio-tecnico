@@ -43,7 +43,7 @@ export const useStore = create<StoreState>((set: SetState<StoreState>) => ({
   createStore: async (storeData) => {
     try {
       const response = await axios.post<Store>(
-        "http://localhost:3000/stores",
+        "http://localhost:3007/stores",
         storeData
       );
       set((state) => ({
@@ -58,7 +58,7 @@ export const useStore = create<StoreState>((set: SetState<StoreState>) => ({
   getStoreByCnpj: async (cnpj) => {
     try {
       const response = await axios.get<Store>(
-        `http://localhost:3000/stores/${cnpj}`
+        `http://localhost:3007/stores/${cnpj}`
       );
       set({ store: response.data, errorMessage: null });
     } catch (error: any) {
@@ -73,7 +73,7 @@ export const useStore = create<StoreState>((set: SetState<StoreState>) => ({
 
   getAllStores: async () => {
     try {
-      const response = await axios.get<Store[]>("http://localhost:3000/stores");
+      const response = await axios.get<Store[]>("http://localhost:3007/stores");
       set(() => ({ stores: response.data }));
     } catch (error: any) {
       set(() => ({ error }));
@@ -81,7 +81,7 @@ export const useStore = create<StoreState>((set: SetState<StoreState>) => ({
   },
   deleteStore: async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/stores/${id}`);
+      await axios.delete(`http://localhost:3007/stores/${id}`);
       set((state) => ({
         stores: state.stores.filter((store) => store.id !== id),
         success: true,
@@ -93,7 +93,7 @@ export const useStore = create<StoreState>((set: SetState<StoreState>) => ({
   updateStore: async (id, storeData) => {
     try {
       const response = await axios.patch<Store>(
-        `http://localhost:3000/stores/${id}`,
+        `http://localhost:3007/stores/${id}`,
         storeData
       );
       set((state) => ({
