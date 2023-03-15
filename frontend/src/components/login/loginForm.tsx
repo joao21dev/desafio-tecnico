@@ -53,6 +53,7 @@ const LoginForm = () => {
         color="primary"
         fullWidth
         disabled={loading}
+        style={{ backgroundColor: "#FB637E" }}
       >
         Entrar
       </Button>

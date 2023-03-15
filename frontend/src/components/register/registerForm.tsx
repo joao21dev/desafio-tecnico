@@ -62,6 +62,7 @@ const RegisterForm = () => {
         color="primary"
         fullWidth
         disabled={loading}
+        style={{ backgroundColor: "#FB637E" }}
       >
         Registrar
       </Button>

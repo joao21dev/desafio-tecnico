@@ -9,6 +9,6 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 4000
 
-CMD ["sh", "-c", "echo 'Frontend rodando em http://localhost:8080'; yarn dev --port 4000"]
+CMD ["sh", "-c", "echo 'Frontend rodando em http://localhost:4000'; yarn dev --port 4000"]
