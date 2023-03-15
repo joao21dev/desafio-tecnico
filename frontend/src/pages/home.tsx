@@ -35,32 +35,6 @@ const Home = () => {
         >
           <HomeSearchInput />
           <Box
-            maxWidth={{ xs: "100%", sm: "auto" }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              mt: "24px",
-            }}
-          >
-            <Button
-              variant="contained"
-              size="large"
-              href="/nova-loja"
-              sx={{
-                backgroundColor: "#FB637E",
-                width: { xs: "100%", sm: "auto" },
-                mb: { xs: "16px", sm: "0" },
-                mx: { xs: "16px", sm: "0" },
-                "&:hover": {
-                  backgroundColor: "#FB637E",
-                },
-              }}
-            >
-              Adicionar Nova Loja
-            </Button>
-          </Box>
-          <Box
             sx={{
               borderBottom: "2px solid #E2E2E2",
               height: "40px",
